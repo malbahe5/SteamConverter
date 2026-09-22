@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Steam BHD Converter",
+  "version": "1.1",
+  "description": "يحول أسعار ستيم من الدولار إلى الدينار البحريني",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "steam-bhd-converter@mu5545.local",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+  "host_permissions": [
+    "https://store.steampowered.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://store.steampowered.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}
